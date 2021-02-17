@@ -17,6 +17,7 @@ type Address {
 }
 
 type Card {
+  id: Int
   name: String
   email: String
   phone: String
@@ -32,6 +33,6 @@ type NameList {
 
 type Query {
   name: Name
-  cards: [Card]
+  cards(first: Int, cursor: String, offset: Int, limit: Int): [Card]
   nameList: [NameList]
 }

@@ -1,12 +1,9 @@
-import Link from "next/link";
+import Navigation from "../components/Navigation/Navigation";
 
 const About = () => (
   <div>
+    <Navigation />
     <h1>About Page</h1>
-    <br />
-    <Link href='/'>
-      <a>Go Back</a>
-    </Link>
   </div>
 );
 

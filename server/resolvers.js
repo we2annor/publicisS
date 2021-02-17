@@ -2,10 +2,10 @@ const faker = require("faker");
 
 const Query = {
   name: () => faker.name,
-  cards: () => {
+  cards: (parent, arg) => {
     let lists = [];
     for (let i = 0; i < 20; i++) {
-      lists.push(faker.helpers.createCard());
+      lists.push({ id: i + 1, ...faker.helpers.createCard() });
     }
     return lists;
   },
